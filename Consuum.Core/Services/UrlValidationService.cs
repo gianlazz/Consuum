@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using Consuum.Core.Models;
@@ -22,7 +23,7 @@ namespace Consuum.Core.Services
             return result;
         }
 
-        public void PingUrls()
+        public bool IsValidUrl(string url)
         {
             /* Should have some kind of error handeling
              * if there's no connectivity.
@@ -33,7 +34,19 @@ namespace Consuum.Core.Services
              * 
              * Ultimately all Urls should be marked as valid, invalid, or possible
              * or something to that effect.
-             */ 
+             */
+
+            WebRequest webRequest = WebRequest.Create(url);
+            WebResponse webResponse;
+            try
+            {
+                webResponse = webRequest.GetResponse();
+            }
+            catch //If exception thrown then couldn't get response from address
+            {
+                return false;
+            }
+            return true;
         }
 
         private List<string> UrlRegex(string input)
