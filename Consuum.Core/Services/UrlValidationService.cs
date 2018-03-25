@@ -22,6 +22,20 @@ namespace Consuum.Core.Services
             return result;
         }
 
+        public void PingUrls()
+        {
+            /* Should have some kind of error handeling
+             * if there's no connectivity.
+             * 
+             * It would then be nice to go back over and re-evaluate
+             * all of the urls once there is connectivity to then 
+             * resolve which ones respond or timeout.
+             * 
+             * Ultimately all Urls should be marked as valid, invalid, or possible
+             * or something to that effect.
+             */ 
+        }
+
         private List<string> UrlRegex(string input)
         {
             #region attempts for reference

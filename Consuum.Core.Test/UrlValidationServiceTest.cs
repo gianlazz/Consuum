@@ -15,9 +15,9 @@ namespace Consuum.Core.Test
         private const string ValidHttpsLink = "https://google.com";
         private const string ValidWwwLink = "www.google.com";
         private const string ValidLinkWithoutPrefix = "google.com";
+        private const string AllSimpleUrls = "https://www.google.com http://www.google.com https://google.com http://google.com www.google.com google.com";
         //Moderately Challenging Url Variables
         private const string SingleInvalidUrl = "http://asdfasljasdkjlfakjhaskjhkhjaskjhfkjkaskhjhkja.com";
-        private const string ValidUrls = "http://google.com google.com www.google.com https://google.com";
         private const string InvalidUrls = ""; //partial urls or urls that don't resolve to real sites
         //Complex Url Variables
         private const string ValidAndInvalidUrls = "";
@@ -91,10 +91,10 @@ namespace Consuum.Core.Test
 
 
             //Act
-            urlValidationService.ParseForUrls($"{ValidHttpLink} {ValidHttpsLink} {ValidWwwLink} {ValidLinkWithoutPrefix}", out count);
+            urlValidationService.ParseForUrls(AllSimpleUrls, out count);
 
             //Assert
-            Assert.AreEqual(4, count);
+            Assert.AreEqual(6, count);
         }
 
         [Test]
@@ -109,6 +109,20 @@ namespace Consuum.Core.Test
 
             //Assert
             Assert.AreEqual(4, count);
+        }
+
+        [Test]
+        public void CheckForUrls_AllSimpleUrlsWithoutSpaces_FindsAndReturnsIntCountOf_6()
+        {
+            //Arrange
+            UrlValidationService urlValidationService = new UrlValidationService();
+            int count = 0;
+
+            //Act
+            urlValidationService.ParseForUrls($"{AllSimpleUrls.Trim(' ')}", out count);
+
+            //Assert
+            Assert.AreEqual(6, count);
         }
 
         //[Test]
