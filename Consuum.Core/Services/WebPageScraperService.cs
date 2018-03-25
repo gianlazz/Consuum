@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Consuum.Core.Services
 {
-    class WebPageReadingContentScraperService
+    class WebPageContentScraperService
     {
         public TextAnnotation Scrape(Url url)
         {
