@@ -8,13 +8,23 @@ namespace Consuum.Core.Services
 {
     public class UrlValidationService
     {
-        public bool ParseForUrls(string text)
+
+        public List<string> ParseForUrls(string input)
         {
-            return false;
+            return UrlRegex(input);
         }
 
-        public int CheckForUrls(string input)
+        public List<string> ParseForUrls(string input, out int numberFound)
         {
+            var result = UrlRegex(input);
+            numberFound = result.Count;
+
+            return result;
+        }
+
+        private List<string> UrlRegex(string input)
+        {
+            #region attempts for reference
             //var text = Regex.Replace(input,
             //    @"((http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?)",
             //    "<a target='_blank' href='$1'>$1</a>");
@@ -34,9 +44,9 @@ namespace Consuum.Core.Services
             //This one seems perfect but I cant get it to work
             //Regex regx = new Regex(@"((http:\/\/ www\.| https:\/\/ www\.| http:\/\/| https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})? (\/.*)?)", RegexOptions.IgnoreCase);
             //^ (http:\/\/ www\.| https:\/\/ www\.| http:\/\/| https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})? (\/.*)?$
+            #endregion
 
             Regex regx = new Regex(@"(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+", RegexOptions.IgnoreCase);
-
 
             MatchCollection mactches = regx.Matches(input);
 
@@ -48,7 +58,7 @@ namespace Consuum.Core.Services
                 urls.Add(match.ToString());
             }
 
-            return urls.Count;
+            return urls;
         }
     }
 }

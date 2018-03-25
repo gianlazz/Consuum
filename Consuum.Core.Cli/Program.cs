@@ -12,7 +12,7 @@ namespace Consuum.Core.Cli
             Console.WriteLine("Hello World!");
             Console.WriteLine("Enter in a string that contains urls: ");
             UrlValidationService urlValidation = new UrlValidationService();
-            Console.WriteLine($"{urlValidation.CheckForUrls(Console.ReadLine())} urls found.");
+            Console.WriteLine($"{urlValidation.ParseForUrls(Console.ReadLine())} urls found.");
 
             Console.ReadKey();
         }

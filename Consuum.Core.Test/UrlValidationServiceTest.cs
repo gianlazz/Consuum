@@ -31,12 +31,13 @@ namespace Consuum.Core.Test
         {
             //Arrange
             UrlValidationService urlValidationService = new UrlValidationService();
+            int count = 0;
 
             //Act
-            int results = urlValidationService.CheckForUrls(ValidHttpLink);
+            urlValidationService.ParseForUrls(ValidHttpLink, out count);
 
             //Assert
-            Assert.AreEqual(1, results);
+            Assert.AreEqual(1, count);
         }
 
         [Test]
@@ -44,12 +45,13 @@ namespace Consuum.Core.Test
         {
             //Arrange
             UrlValidationService urlValidationService = new UrlValidationService();
+            int count = 0;
 
             //Act
-            int results = urlValidationService.CheckForUrls(ValidHttpsLink);
+            urlValidationService.ParseForUrls(ValidHttpsLink, out count);
 
             //Assert
-            Assert.AreEqual(1, results);
+            Assert.AreEqual(1, count);
         }
 
         [Test]
@@ -57,12 +59,13 @@ namespace Consuum.Core.Test
         {
             //Arrange
             UrlValidationService urlValidationService = new UrlValidationService();
+            int count = 0;
 
             //Act
-            int results = urlValidationService.CheckForUrls(ValidWwwLink);
+            urlValidationService.ParseForUrls(ValidWwwLink, out count);
 
             //Assert
-            Assert.AreEqual(1, results);
+            Assert.AreEqual(1, count);
         }
 
         [Test]
@@ -70,12 +73,13 @@ namespace Consuum.Core.Test
         {
             //Arrange
             UrlValidationService urlValidationService = new UrlValidationService();
+            int count = 0;
 
             //Act
-            int results = urlValidationService.CheckForUrls(ValidLinkWithoutPrefix);
+            urlValidationService.ParseForUrls(ValidLinkWithoutPrefix, out count);
 
             //Assert
-            Assert.AreEqual(1, results);
+            Assert.AreEqual(1, count);
         }
 
         [Test]
@@ -83,12 +87,14 @@ namespace Consuum.Core.Test
         {
             //Arrange
             UrlValidationService urlValidationService = new UrlValidationService();
+            int count = 0;
+
 
             //Act
-            int results = urlValidationService.CheckForUrls($"{ValidHttpLink} {ValidHttpsLink} {ValidWwwLink} {ValidLinkWithoutPrefix}");
+            urlValidationService.ParseForUrls($"{ValidHttpLink} {ValidHttpsLink} {ValidWwwLink} {ValidLinkWithoutPrefix}", out count);
 
             //Assert
-            Assert.AreEqual(4, results);
+            Assert.AreEqual(4, count);
         }
 
         [Test]
@@ -96,13 +102,15 @@ namespace Consuum.Core.Test
         {
             //Arrange
             UrlValidationService urlValidationService = new UrlValidationService();
+            int count = 0;
 
             //Act
-            int results = urlValidationService.CheckForUrls($"{ValidHttpLink}{ValidHttpsLink}{ValidWwwLink}{ValidLinkWithoutPrefix}");
+            urlValidationService.ParseForUrls($"{ValidHttpLink}{ValidHttpsLink}{ValidWwwLink}{ValidLinkWithoutPrefix}", out count);
 
             //Assert
-            Assert.AreEqual(4, results);
+            Assert.AreEqual(4, count);
         }
+
         //[Test]
         //public void ParseForUrls_AcceptsString_ReturnsPossibleUrls()
         //{
