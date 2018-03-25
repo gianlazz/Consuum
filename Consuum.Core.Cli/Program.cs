@@ -28,6 +28,8 @@ namespace Consuum.Core.Cli
                 }
             }
             Console.WriteLine("Press enter to scrape valid links.");
+            Console.ReadKey();
+            Console.WriteLine("Scraping now...");
             WebPageContentScraperService scraper = new WebPageContentScraperService();
             List<Url> urlCollection = new List<Url>();
 
