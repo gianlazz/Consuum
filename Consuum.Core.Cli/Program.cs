@@ -27,7 +27,7 @@ namespace Consuum.Core.Cli
                     Console.WriteLine($"{url} did not respond.");
                 }
             }
-            Console.WriteLine("Press enter to scrap valid links.");
+            Console.WriteLine("Press enter to scrape valid links.");
             WebPageContentScraperService scraper = new WebPageContentScraperService();
             List<Url> urlCollection = new List<Url>();
 

@@ -26,6 +26,13 @@ namespace Consuum.Core.Services
 
             //return webBrowser1.Document.Body.InnerText;
 
+            //This is used in two places and should probably be broken out
+            //into it's own class.
+            if (!url.Link.Contains("http"))
+            {
+                url.Link = $"https://{url.Link}";
+            }
+
             var client = new WebClient();
             var content = client.DownloadString(url.Link);
 
