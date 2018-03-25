@@ -36,10 +36,13 @@ namespace Consuum.Core.Services
              * or something to that effect.
              */
 
-            WebRequest webRequest = WebRequest.Create(url);
-            WebResponse webResponse;
+            // This doesn't handle urls without http:// or https:// in the beginning
+            // I'll probably have to do something about it.
+            // Maybe I should use Uri.TryParse(); ?
             try
             {
+                WebRequest webRequest = WebRequest.Create(url);
+                WebResponse webResponse;
                 webResponse = webRequest.GetResponse();
             }
             catch //If exception thrown then couldn't get response from address

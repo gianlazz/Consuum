@@ -12,8 +12,21 @@ namespace Consuum.Core.Cli
             Console.WriteLine("Hello World!");
             Console.WriteLine("Enter in a string that contains urls: ");
             UrlValidationService urlValidation = new UrlValidationService();
-            Console.WriteLine($"{urlValidation.ParseForUrls(Console.ReadLine()).Count} urls found.");
-
+            string userInput = Console.ReadLine();
+            var urls = urlValidation.ParseForUrls(userInput);
+            Console.WriteLine($"{urls.Count} urls found.");
+            int didConnectCounter = 0;
+            foreach (var url in urls)
+            {
+                if (urlValidation.IsValidUrl(url))
+                {
+                    Console.WriteLine($"{url} did connect.");
+                }
+                else
+                {
+                    Console.WriteLine($"{url} did not respond.");
+                }
+            }
             Console.ReadKey();
         }
     }

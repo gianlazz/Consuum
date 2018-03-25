@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using Consuum.Core.Services;
 using Consuum.Core.Interfaces;
 using Consuum.Core.Models;
@@ -141,6 +142,29 @@ namespace Consuum.Core.Test
 
             //Assert
             Assert.AreEqual(true, didConnect);
+        }
+
+        [Test]
+        public void IsValidUrl_AllSimpleUrls_ReturnsTrue()
+        {
+            //Arrange
+            UrlValidationService urlValidationService = new UrlValidationService();
+            List<string> urls = new List<string>();
+            int didConnectCounter = 0;
+
+            //Act
+            urls = urlValidationService.ParseForUrls(AllSimpleUrls);
+            foreach (var url in urls)
+            {
+                if (urlValidationService.IsValidUrl(url))
+                {
+                    didConnectCounter++;
+                }
+            }
+            
+
+            //Assert
+            Assert.AreEqual(6, didConnectCounter);
         }
 
         //[Test]
