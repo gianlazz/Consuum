@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Consuum.Core.Interfaces;
 using Consuum.Core.Models;
 using Consuum.Core.Services;
@@ -15,7 +16,6 @@ namespace Consuum.Core.Cli
             string userInput = Console.ReadLine();
             var urls = urlValidation.ParseForUrls(userInput);
             Console.WriteLine($"{urls.Count} urls found.");
-            int didConnectCounter = 0;
             foreach (var url in urls)
             {
                 if (urlValidation.IsValidUrl(url))
@@ -26,6 +26,22 @@ namespace Consuum.Core.Cli
                 {
                     Console.WriteLine($"{url} did not respond.");
                 }
+            }
+            Console.WriteLine("Press enter to scrap valid links.");
+            WebPageContentScraperService scraper = new WebPageContentScraperService();
+            List<Url> urlCollection = new List<Url>();
+
+            foreach (var url in urls)
+            {
+                if (urlValidation.IsValidUrl(url))
+                {
+                    urlCollection.Add(new Url { Link=url, IsValid=true });
+                }
+            }
+            foreach (var url in urlCollection)
+            {
+                Console.WriteLine("Scraped Contents: ");
+                Console.WriteLine(scraper.Scrape(url).Text);
             }
             Console.ReadKey();
         }

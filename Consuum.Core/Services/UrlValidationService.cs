@@ -36,13 +36,26 @@ namespace Consuum.Core.Services
              * or something to that effect.
              */
 
+            #region Notes about solving absolutepath exception on WebRequest.Create()
+            //Uri uri;
+            //var UriDidSucceed = Uri.TryCreate(url, UriKind.RelativeOrAbsolute, out uri);
+
             // This doesn't handle urls without http:// or https:// in the beginning
             // I'll probably have to do something about it.
             // Maybe I should use Uri.TryParse(); ?
+            #endregion
+
+            //If path is relitive make it absolute
+            //for WebRequest.Create()
+            if (!url.Contains("http"))
+            {
+                url = $"https://{url}";
+            }
+
+            WebRequest webRequest = WebRequest.Create(url);
+            WebResponse webResponse;
             try
             {
-                WebRequest webRequest = WebRequest.Create(url);
-                WebResponse webResponse;
                 webResponse = webRequest.GetResponse();
             }
             catch //If exception thrown then couldn't get response from address
