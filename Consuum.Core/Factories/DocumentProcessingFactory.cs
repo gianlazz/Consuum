@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Consuum.Core.Services
 {
-    class DocumentProcessingService
+    class DocumentProcessingFactory
     {
         public Document Create()
         {

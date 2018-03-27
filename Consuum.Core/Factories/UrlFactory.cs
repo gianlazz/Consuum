@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Consuum.Core.Services
+namespace Consuum.Core.Factories
 {
-    class TextAnnotationService
+    class UrlFactory
     {
     }
 }
