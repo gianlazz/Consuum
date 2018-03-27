@@ -17,6 +17,5 @@ namespace Consuum.Core.Models
          * for cool animations or renderings of the reading process.
          */
         public string Text { get; set; }
-        public List<Url> ContainedLinks { get; set; }
     }
 }
