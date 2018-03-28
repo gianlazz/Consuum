@@ -30,6 +30,7 @@ namespace Consuum.Core.Factories
                     break;
                 case InputType.ImageFromBase64:
                     document.Image = ImageFactory.CreateFromBase64(input);
+                    document.TextAnnotation = new OcrService().Parse(document.Image);
                     //(settings.UrlParsingSettings.ParseForUrls) ? UrlValidationService: ;
                     break;
                 case InputType.Text:

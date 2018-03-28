@@ -8,7 +8,7 @@ namespace Consuum.Core.Models
     {
         public DateTime DateTimeCreated { get; set; }
         public Image Image { get; set; }
-        public TextAnnotation MyProperty { get; set; }
+        public TextAnnotation TextAnnotation { get; set; }
         public List<Url> ContainedLinks { get; set; }
     }
 }
