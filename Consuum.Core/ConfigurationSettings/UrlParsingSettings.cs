@@ -2,5 +2,6 @@
 {
     public class UrlParsingSettings
     {
+        public bool ParseForUrls { get; internal set; }
     }
 }

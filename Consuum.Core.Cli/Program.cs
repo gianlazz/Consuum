@@ -17,13 +17,12 @@ namespace Consuum.Core.Cli
             SettingsSerializer.Dehydrate(new ConsuumSettings());
             //read it
             Console.WriteLine("Enter in a string that contains urls: ");
-            UrlValidationService urlValidation = new UrlValidationService();
             string userInput = Console.ReadLine();
-            var urls = urlValidation.ParseForUrls(userInput);
+            var urls = UrlValidationService.ParseForUrls(userInput);
             Console.WriteLine($"{urls.Count} urls found.");
             foreach (var url in urls)
             {
-                if (urlValidation.IsValidUrl(url))
+                if (UrlValidationService.IsValidUrl(url))
                 {
                     Console.WriteLine($"{url} did connect.");
                 }
@@ -40,7 +39,7 @@ namespace Consuum.Core.Cli
 
             foreach (var url in urls)
             {
-                if (urlValidation.IsValidUrl(url))
+                if (UrlValidationService.IsValidUrl(url))
                 {
                     urlCollection.Add(new Url { Link=url, IsValid=true });
                 }

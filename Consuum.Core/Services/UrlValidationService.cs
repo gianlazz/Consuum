@@ -10,12 +10,12 @@ namespace Consuum.Core.Services
     public class UrlValidationService
     {
 
-        public List<string> ParseForUrls(string input)
+        public static List<string> ParseForUrls(string input)
         {
             return UrlRegex(input);
         }
 
-        public List<string> ParseForUrls(string input, out int numberFound)
+        public static List<string> ParseForUrls(string input, out int numberFound)
         {
             var result = UrlRegex(input);
             numberFound = result.Count;
@@ -23,7 +23,7 @@ namespace Consuum.Core.Services
             return result;
         }
 
-        public bool IsValidUrl(string url)
+        public static bool IsValidUrl(string url)
         {
             /* Should have some kind of error handeling
              * if there's no connectivity.
@@ -65,7 +65,7 @@ namespace Consuum.Core.Services
             return true;
         }
 
-        private List<string> UrlRegex(string input)
+        private static List<string> UrlRegex(string input)
         {
             #region attempts for reference
             //var text = Regex.Replace(input,

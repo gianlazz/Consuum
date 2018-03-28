@@ -31,11 +31,10 @@ namespace Consuum.Core.Test
         public void CheckForUrls_Pass1ValidHttpLink_FindsAndReturnsIntCountOf1()
         {
             //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
             int count = 0;
 
             //Act
-            urlValidationService.ParseForUrls(ValidHttpLink, out count);
+            UrlValidationService.ParseForUrls(ValidHttpLink, out count);
 
             //Assert
             Assert.AreEqual(1, count);
@@ -45,11 +44,10 @@ namespace Consuum.Core.Test
         public void CheckForUrls_Pass1ValidHttpsLink_FindsAndReturnsIntCountOf1()
         {
             //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
             int count = 0;
 
             //Act
-            urlValidationService.ParseForUrls(ValidHttpsLink, out count);
+            UrlValidationService.ParseForUrls(ValidHttpsLink, out count);
 
             //Assert
             Assert.AreEqual(1, count);
@@ -59,11 +57,10 @@ namespace Consuum.Core.Test
         public void CheckForUrls_PassValidWwwLink_FindsAndReturnsIntCountOf1()
         {
             //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
             int count = 0;
 
             //Act
-            urlValidationService.ParseForUrls(ValidWwwLink, out count);
+            UrlValidationService.ParseForUrls(ValidWwwLink, out count);
 
             //Assert
             Assert.AreEqual(1, count);
@@ -73,11 +70,10 @@ namespace Consuum.Core.Test
         public void CheckForUrls_ValidLinkWithoutPrefix_FindsAndReturnsIntCountOf1()
         {
             //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
             int count = 0;
 
             //Act
-            urlValidationService.ParseForUrls(ValidLinkWithoutPrefix, out count);
+            UrlValidationService.ParseForUrls(ValidLinkWithoutPrefix, out count);
 
             //Assert
             Assert.AreEqual(1, count);
@@ -87,12 +83,11 @@ namespace Consuum.Core.Test
         public void CheckForUrls_AllSimpleUrls_FindsAndReturnsIntCountOf_4()
         {
             //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
             int count = 0;
 
 
             //Act
-            urlValidationService.ParseForUrls(AllSimpleUrls, out count);
+            UrlValidationService.ParseForUrls(AllSimpleUrls, out count);
 
             //Assert
             Assert.AreEqual(6, count);
@@ -102,11 +97,10 @@ namespace Consuum.Core.Test
         public void CheckForUrls_AllSimpleUrlsWithoutSpaces_FindsAndReturnsIntCountOf_4()
         {
             //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
             int count = 0;
 
             //Act
-            urlValidationService.ParseForUrls($"{ValidHttpLink}{ValidHttpsLink}{ValidWwwLink}{ValidLinkWithoutPrefix}", out count);
+            UrlValidationService.ParseForUrls($"{ValidHttpLink}{ValidHttpsLink}{ValidWwwLink}{ValidLinkWithoutPrefix}", out count);
 
             //Assert
             Assert.AreEqual(4, count);
@@ -116,11 +110,10 @@ namespace Consuum.Core.Test
         public void CheckForUrls_AllSimpleUrlsWithoutSpaces_FindsAndReturnsIntCountOf_6()
         {
             //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
             int count = 0;
 
             //Act
-            urlValidationService.ParseForUrls($"{AllSimpleUrls.Trim(' ')}", out count);
+            UrlValidationService.ParseForUrls($"{AllSimpleUrls.Trim(' ')}", out count);
 
             //Assert
             Assert.AreEqual(6, count);
@@ -135,10 +128,9 @@ namespace Consuum.Core.Test
         public void IsValidUrl_ValidHttpLink_ReturnsTrue()
         {
             //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
 
             //Act
-            bool didConnect = urlValidationService.IsValidUrl(ValidHttpLink);
+            bool didConnect = UrlValidationService.IsValidUrl(ValidHttpLink);
 
             //Assert
             Assert.AreEqual(true, didConnect);
@@ -148,15 +140,14 @@ namespace Consuum.Core.Test
         public void IsValidUrl_AllSimpleUrls_ReturnsTrue()
         {
             //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
             List<string> urls = new List<string>();
             int didConnectCounter = 0;
 
             //Act
-            urls = urlValidationService.ParseForUrls(AllSimpleUrls);
+            urls = UrlValidationService.ParseForUrls(AllSimpleUrls);
             foreach (var url in urls)
             {
-                if (urlValidationService.IsValidUrl(url))
+                if (UrlValidationService.IsValidUrl(url))
                 {
                     didConnectCounter++;
                 }
