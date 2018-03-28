@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Consuum.Core.Interfaces;
 using Consuum.Core.Models;
 using Consuum.Core.Services;
+using Consuum.Core.ConfigurationSettings;
 
 namespace Consuum.Core.Cli
 {
@@ -11,6 +12,10 @@ namespace Consuum.Core.Cli
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            //Check if ConsuumSettings.config exsists
+            //if not create it on disk
+            SettingsSerializer.Dehydrate(new ConsuumSettings());
+            //read it
             Console.WriteLine("Enter in a string that contains urls: ");
             UrlValidationService urlValidation = new UrlValidationService();
             string userInput = Console.ReadLine();
