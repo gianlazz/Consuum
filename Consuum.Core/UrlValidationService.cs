@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Consuum.Core.Models;
 
-namespace Consuum.Core.Services
+namespace Consuum.Core
 {
     public class UrlValidationService
     {

@@ -8,5 +8,10 @@ namespace Consuum.Core.Models
     {
         public string Text { get; set; }
         public List<Url> ContainedLinks { get; set; }
+
+        public TextAnnotation()
+        {
+            ContainedLinks = new List<Url>();
+        }
     }
 }
