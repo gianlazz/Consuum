@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using Consuum.Core.Services;
 using Consuum.Core.Models;
 
 namespace Consuum.Core.Test
