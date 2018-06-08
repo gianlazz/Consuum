@@ -165,33 +165,33 @@ namespace Consuum.Core.Test
             Assert.AreEqual(6, didConnectCounter);
         }
 
-        //[Test]
-        //public void ParseForUrls_AcceptsString_ReturnsPossibleUrls()
-        //{
-        //    //Arrange
-        //    UrlValidationService urlValidationService = new UrlValidationService();
+        [Test]
+        public void ParseForUrls_AcceptsString_ReturnsPossibleUrls()
+        {
+           //Arrange
+           UrlValidationService urlValidationService = new UrlValidationService();
 
-        //    //Act
-        //    urlValidationService.ParseForUrls("and example of ocr text that contains urls");
+           //Act
+           urlValidationService.ParseForUrls("and example of ocr text that contains urls");
 
-        //    //Assert
+           //Assert
 
-        //}
+        }
 
-        //[Test]
-        //public void ValidateUrl_ValidUrl_ShouldReturnUrlMarkedAsInvalid()
-        //{
+        [Test]
+        public void ValidateUrl_ValidUrl_ShouldReturnUrlMarkedAsInvalid()
+        {
 
-        //}
+        }
 
-        //[Test]
-        ///* I imagine this using google or some kind of third party search service which will probably
-        // * require an interface and dependency injection to fulfill so I'm not bound by specific solutions.
-        // */
+        [Test]
+        /* I imagine this using google or some kind of third party search service which will probably
+        * require an interface and dependency injection to fulfill so I'm not bound by specific solutions.
+        */
 
-        //public void AttemptToFixPartialUrls_AcceptsListOfUrls_ReturnsIntToSignifyHowManyWereFixed()
-        //{
+        public void AttemptToFixPartialUrls_AcceptsListOfUrls_ReturnsIntToSignifyHowManyWereFixed()
+        {
 
-        //}
+        }
     }
 }
