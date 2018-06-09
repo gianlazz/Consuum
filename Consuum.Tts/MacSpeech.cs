@@ -8,12 +8,11 @@ namespace Consuum.Tts
     {
         public VoiceEnum Voice = VoiceEnum.Alex;
 
-        public void Speak(string input, int? wpm = 0)
+        public void Speak(string input, int? wpm = 200)
         {
-            string speed = (wpm == null) ? $"-r {wpm}" : string.Empty;
             try
             {
-                var procStartInfo = new ProcessStartInfo($"say -v Alex {input} -r 200")
+                var procStartInfo = new ProcessStartInfo($"say -v Alex {input} -r {wpm}")
                 {
                     //RedirectStandardOutput = true,
                     UseShellExecute = true,
