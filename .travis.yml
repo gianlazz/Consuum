@@ -10,6 +10,12 @@ matrix:
 # script:
 #   - xbuild /p:Configuration=Release Consuum.sln
 #   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./MyProject.Tests/bin/Release/MyProject.Tests.dll
+
+# the following commands are just examples, use whatever your build process requires
+  # - sudo apt-get install -y gtk-sharp2
+  # - ./build.sh
+  # - ./test.sh
+  # - grep "Test Results" build.log
 notifications:
   email:
     recipients:
