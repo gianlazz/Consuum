@@ -124,74 +124,33 @@ namespace Consuum.Domain.Test
             Assert.AreEqual(6, count);
         }
 
-        // Might this be breaking the rule of unit testing by not mocking
-        // the external networking dependencies, so this test could fail
-        // even though the code is good, just if the internet isn't working...
-        // So that kind of makes it an integration test until I mock it, or
-        // setup some kind of DI for networking
-        [Test]
-        public void IsValidUrl_ValidHttpLink_ReturnsTrue()
-        {
-            //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
+        // [Test]
+        // public void ParseForUrls_AcceptsString_ReturnsPossibleUrls()
+        // {
+        //    //Arrange
+        //    UrlValidationService urlValidationService = new UrlValidationService();
 
-            //Act
-            bool didConnect = urlValidationService.IsValidUrl(ValidHttpLink);
+        //    //Act
+        //    urlValidationService.ParseForUrls("and example of ocr text that contains urls");
 
-            //Assert
-            Assert.AreEqual(true, didConnect);
-        }
+        //    //Assert
 
-        [Test]
-        public void IsValidUrl_AllSimpleUrls_ReturnsTrue()
-        {
-            //Arrange
-            UrlValidationService urlValidationService = new UrlValidationService();
-            List<string> urls = new List<string>();
-            int didConnectCounter = 0;
+        // }
 
-            //Act
-            urls = urlValidationService.ParseForUrls(AllSimpleUrls);
-            foreach (var url in urls)
-            {
-                if (urlValidationService.IsValidUrl(url))
-                {
-                    didConnectCounter++;
-                }
-            }
-            
+        // [Test]
+        // public void ValidateUrl_ValidUrl_ShouldReturnUrlMarkedAsInvalid()
+        // {
 
-            //Assert
-            Assert.AreEqual(6, didConnectCounter);
-        }
+        // }
 
-        [Test]
-        public void ParseForUrls_AcceptsString_ReturnsPossibleUrls()
-        {
-           //Arrange
-           UrlValidationService urlValidationService = new UrlValidationService();
+        // [Test]
+        // /* I imagine this using google or some kind of third party search service which will probably
+        // * require an interface and dependency injection to fulfill so I'm not bound by specific solutions.
+        // */
 
-           //Act
-           urlValidationService.ParseForUrls("and example of ocr text that contains urls");
+        // public void AttemptToFixPartialUrls_AcceptsListOfUrls_ReturnsIntToSignifyHowManyWereFixed()
+        // {
 
-           //Assert
-
-        }
-
-        [Test]
-        public void ValidateUrl_ValidUrl_ShouldReturnUrlMarkedAsInvalid()
-        {
-
-        }
-
-        [Test]
-        /* I imagine this using google or some kind of third party search service which will probably
-        * require an interface and dependency injection to fulfill so I'm not bound by specific solutions.
-        */
-
-        public void AttemptToFixPartialUrls_AcceptsListOfUrls_ReturnsIntToSignifyHowManyWereFixed()
-        {
-
-        }
+        // }
     }
 }
