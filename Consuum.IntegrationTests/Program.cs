@@ -6,7 +6,7 @@ namespace Consuum.IntegrationTests
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Attempting to run integration tests");
         }
 
         // // Might this be breaking the rule of unit testing by not mocking

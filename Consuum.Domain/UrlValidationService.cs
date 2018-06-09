@@ -4,7 +4,6 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using Consuum.Domain.Models;
-using System.Net.Http; 
 
 namespace Consuum.Domain
 {
