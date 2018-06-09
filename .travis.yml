@@ -1,2 +1,8 @@
 language: csharp
 solution: Consuum.sln
+notifications:
+  email:
+    recipients:
+      - gianlazzarini@gmail.com
+    on_success: always # default: change
+    on_failure: always # default: always
