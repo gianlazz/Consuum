@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Consuum.Core.Models
+namespace Consuum.Domain.Models
 {
     public class TextAnnotation
     {

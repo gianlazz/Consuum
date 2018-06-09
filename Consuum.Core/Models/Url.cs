@@ -1,4 +1,4 @@
-﻿namespace Consuum.Core.Models
+﻿namespace Consuum.Domain.Models
 {
     public class Url
     {

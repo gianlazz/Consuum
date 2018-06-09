@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using Consuum.Core.Models;
+using Consuum.Domain.Models;
 
-namespace Consuum.Core
+namespace Consuum.Domain
 {
     public class UrlValidationService
     {

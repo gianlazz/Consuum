@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consuum.Core", "Consuum.Core\Consuum.Core.csproj", "{1ADB2694-B5D3-4C52-9883-9C33A28A52B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consuum.Domain", "Consuum.Domain\Consuum.Domain.csproj", "{1ADB2694-B5D3-4C52-9883-9C33A28A52B5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consuum.Core.Test", "Consuum.Core.Test\Consuum.Core.Test.csproj", "{AB735162-6F59-49E1-9A16-C6184B4ECA95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consuum.Domain.Test", "Consuum.Domain.Test\Consuum.Domain.Test.csproj", "{AB735162-6F59-49E1-9A16-C6184B4ECA95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consuum.Tts", "Consuum.Tts\Consuum.Tts.csproj", "{ACD5D23D-811E-4939-B2EE-EBC70DC1DE8E}"
 EndProject

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Consuum.Core.Models;
+using Consuum.Domain.Models;
 
-namespace Consuum.Core
+namespace Consuum.Domain
 {
     public interface ITextReader
     {

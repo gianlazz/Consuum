@@ -1,4 +1,4 @@
-namespace Consuum.Core
+namespace Consuum.Domain
 {
     public interface ITextToSpeech
     {

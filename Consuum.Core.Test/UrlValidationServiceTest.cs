@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using Consuum.Core.Models;
+using Consuum.Domain.Models;
 
-namespace Consuum.Core.Test
+namespace Consuum.Domain.Test
 {
     [TestFixture]
     public class UrlValidationServiceTest

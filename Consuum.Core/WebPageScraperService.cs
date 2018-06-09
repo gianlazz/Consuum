@@ -1,9 +1,9 @@
-﻿using Consuum.Core.Models;
+﻿using Consuum.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Consuum.Core
+namespace Consuum.Domain
 {
     class WebPageContentScraperService
     {
