@@ -10,21 +10,22 @@ namespace Consuum.Tts
 
         public void Speak(string input, int? wpm = 0)
         {
-            string speed = (wpm != null) ? $"-r {wpm}" : string.Empty;
+            string speed = (wpm == null) ? $"-r {wpm}" : string.Empty;
             try
             {
-                var procStartInfo = new ProcessStartInfo("terminal")
+                var procStartInfo = new ProcessStartInfo($"say -v Alex {input} -r 200")
                 {
-                    RedirectStandardOutput = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = false,
-                    Arguments = $"say -v {Voice} {input} {speed}"
+                    //RedirectStandardOutput = true,
+                    UseShellExecute = true,
+                    //CreateNoWindow = false,
+                    //Arguments = $"say -v {Voice} {input} {speed}"
+                    //Arguments = $"say -v Alex Hello -r 200"
                 };
 
                 var proc = new Process { StartInfo = procStartInfo };
                 proc.Start();
             }
-            catch{}
+            catch{ throw; }
         }
     }
 
