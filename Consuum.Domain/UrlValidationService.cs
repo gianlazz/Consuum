@@ -45,15 +45,15 @@ namespace Consuum.Domain
                 //var http = new HttpClient();
                 
                 //ISSUES WITH .NET STANDARD USE HTTPCLIENT
-                WebRequest webRequest = WebRequest.Create(url);
-                WebResponse webResponse;
-                webResponse = webRequest.GetResponse();
+                // WebRequest webRequest = WebRequest.Create(url);
+                // WebResponse webResponse;
+                // webResponse = webRequest.GetResponse();
+                return true;
             }
             catch //If exception thrown then couldn't get response from address
             {
                 return false;
             }
-            return true;
         }
 
         private List<string> UrlRegex(string input)
