@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consuum.IntegrationTests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consuum.Cli", "Consuum.Cli\Consuum.Cli.csproj", "{E4B8D3BC-9E1C-4C4D-B520-72964EA1F7B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consuum.Clipboard", "Consuum.Clipboard\Consuum.Clipboard.csproj", "{BE185030-13FC-483E-8A1F-65EC7B8023FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,18 @@ Global
 		{E4B8D3BC-9E1C-4C4D-B520-72964EA1F7B1}.Release|x64.Build.0 = Release|x64
 		{E4B8D3BC-9E1C-4C4D-B520-72964EA1F7B1}.Release|x86.ActiveCfg = Release|x86
 		{E4B8D3BC-9E1C-4C4D-B520-72964EA1F7B1}.Release|x86.Build.0 = Release|x86
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Debug|x64.ActiveCfg = Debug|x64
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Debug|x64.Build.0 = Debug|x64
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Debug|x86.ActiveCfg = Debug|x86
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Debug|x86.Build.0 = Debug|x86
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Release|x64.ActiveCfg = Release|x64
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Release|x64.Build.0 = Release|x64
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Release|x86.ActiveCfg = Release|x86
+		{BE185030-13FC-483E-8A1F-65EC7B8023FA}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
