@@ -1,5 +1,11 @@
 language: csharp
 solution: Consuum.sln
+install:
+  - nuget restore Consuum.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release Consuum.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./MyProject.Tests/bin/Release/MyProject.Tests.dll
 notifications:
   email:
     recipients:
