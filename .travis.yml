@@ -1,5 +1,9 @@
 language: csharp
 solution: Consuum.sln
+matrix:
+  include:
+    - dotnet: latest
+    - mono: latest
 install:
   - nuget restore Consuum.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
