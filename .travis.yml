@@ -3,7 +3,7 @@ solution: Consuum.sln
 matrix:
   include:
     - dotnet: 2.1.101
-    - mono: latest
+#    - mono: latest
 # install:
 #   - nuget restore Consuum.sln
 #   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
