@@ -4,6 +4,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using Consuum.Domain.Models;
+using System.Net.Http; 
 
 namespace Consuum.Domain
 {
@@ -41,6 +42,9 @@ namespace Consuum.Domain
             // Maybe I should use Uri.TryParse(); ?
             try
             {
+                //var http = new HttpClient();
+                
+                //ISSUES WITH .NET STANDARD USE HTTPCLIENT
                 WebRequest webRequest = WebRequest.Create(url);
                 WebResponse webResponse;
                 webResponse = webRequest.GetResponse();
