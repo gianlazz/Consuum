@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Consuum.Clipboard;
 using Consuum.Tts;
 
@@ -11,8 +12,12 @@ namespace Consuum.Cli
             Console.WriteLine("Hello World!");
             var macSpeech = new MacSpeech();
             var clp = new MacClipboard();
-            clp.GetLines().ForEach(x => macSpeech.Speak(x, 300));
-            //macSpeech.Speak("Hello Rosa, this is my test");
+            var lines = clp.GetLines();
+            for (int i = 0; i < lines.Count; i++)
+            {
+                macSpeech.Speak(lines[i], 350);
+            }
+
             System.Console.Read();
         }
     }

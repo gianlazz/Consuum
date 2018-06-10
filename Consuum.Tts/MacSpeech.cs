@@ -23,6 +23,7 @@ namespace Consuum.Tts
 
                 var proc = new Process { StartInfo = procStartInfo };
                 proc.Start();
+                proc.WaitForExit();
             }
             catch{ throw; }
         }
