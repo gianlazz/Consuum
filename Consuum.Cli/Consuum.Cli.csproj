@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Consuum.Domain\Consuum.Domain.csproj" />
     <ProjectReference Include="..\Consuum.Tts\Consuum.Tts.csproj" />
+    <ProjectReference Include="..\Consuum.Clipboard\Consuum.Clipboard.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

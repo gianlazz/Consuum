@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Consuum.Domain;
 
 namespace Consuum.Clipboard
@@ -8,7 +9,27 @@ namespace Consuum.Clipboard
     {
         public List<string> GetLines()
         {
-            throw new NotImplementedException();
+            var lines = new List<string>();
+            try
+            {
+                var procStartInfo = new ProcessStartInfo()
+                {
+                    FileName = "/bin/sh",
+                    RedirectStandardOutput = true,
+                    Arguments = "-c pbpaste -",
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                };
+
+                var proc = new Process { StartInfo = procStartInfo };
+                proc.Start();
+                while(proc.StandardOutput.EndOfStream == false)
+                {
+                    lines.Add(proc.StandardOutput.ReadLine());
+                }
+                return lines;
+            }
+            catch{ throw; }
         }
     }
 }
