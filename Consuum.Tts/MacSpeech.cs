@@ -12,6 +12,7 @@ namespace Consuum.Tts
         {
             try
             {
+                input = input.FilterForSpeech();
                 var procStartInfo = new ProcessStartInfo($"say -v Alex {input} -r {wpm}")
                 {
                     //RedirectStandardOutput = true,
@@ -26,6 +27,16 @@ namespace Consuum.Tts
                 proc.WaitForExit();
             }
             catch{ throw; }
+        }
+    }
+
+    internal static class MacStringTtsProcess
+    {
+        public static string FilterForSpeech(this string input)
+        {
+            input = input.Replace("(", string.Empty);
+            input = input.Replace(")", string.Empty);
+            return input;
         }
     }
 
