@@ -11,5 +11,7 @@
   "devDependencies": {
     "electron": "^2.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "moonjs": "^0.11.0"
+  }
 }
