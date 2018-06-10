@@ -5,10 +5,20 @@
    "version": "0.2.0",
    "configurations": [
        {
-           "name": "Launch Consuum.Cli",
+           "name": "Build & Launch Consuum.Cli",
            "type": "coreclr",
            "request": "launch",
            "preLaunchTask": "build",
+           "program": "${workspaceRoot}/Consuum.Cli/bin/Debug/netcoreapp2.0/Consuum.Cli.dll",
+           "args": [],
+           "cwd": "${workspaceRoot}/Consuum.Cli",
+           "stopAtEntry": false,
+           "console": "internalConsole"
+       },
+       {
+           "name": "Launch Consuum.Cli",
+           "type": "coreclr",
+           "request": "launch",
            "program": "${workspaceRoot}/Consuum.Cli/bin/Debug/netcoreapp2.0/Consuum.Cli.dll",
            "args": [],
            "cwd": "${workspaceRoot}/Consuum.Cli",

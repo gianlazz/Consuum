@@ -15,10 +15,11 @@ namespace Consuum.Cli
             var lines = clp.GetLines();
             for (int i = 0; i < lines.Count; i++)
             {
+                Console.WriteLine(lines[i]);
                 macSpeech.Speak(lines[i], 350);
             }
 
-            System.Console.Read();
+            //System.Console.Read();
         }
     }
 }

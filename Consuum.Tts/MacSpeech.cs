@@ -36,6 +36,9 @@ namespace Consuum.Tts
         {
             input = input.Replace("(", string.Empty);
             input = input.Replace(")", string.Empty);
+            input = input.Replace("}", string.Empty);
+            input = input.Replace("{", string.Empty);
+            input = input.Replace("'", string.Empty);
             return input;
         }
     }

@@ -25,7 +25,9 @@ namespace Consuum.Clipboard
                 proc.Start();
                 while(proc.StandardOutput.EndOfStream == false)
                 {
-                    lines.Add(proc.StandardOutput.ReadLine());
+                    var line = proc.StandardOutput.ReadLine();
+                    if (string.IsNullOrEmpty(line) == false)
+                        lines.Add(line);
                 }
                 proc.WaitForExit();
                 return lines;
