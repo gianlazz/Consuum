@@ -27,6 +27,7 @@ namespace Consuum.Clipboard
                 {
                     lines.Add(proc.StandardOutput.ReadLine());
                 }
+                proc.WaitForExit();
                 return lines;
             }
             catch{ throw; }
