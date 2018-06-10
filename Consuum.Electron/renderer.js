@@ -14,3 +14,17 @@ new Moon({
       msg: "Hello Moon!"
     }
   });
+
+  const app3 = new Moon({
+    el: "#app3",
+    data: {
+      msg: "Hello Moon!"
+    },
+    methods: {
+      changeMessage: function(msg) {
+        this.set('msg', msg);
+      }
+    }
+  });
+  
+  app3.callMethod('changeMessage', ['New Message!']);
