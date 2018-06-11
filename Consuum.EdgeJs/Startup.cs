@@ -11,9 +11,10 @@ namespace Consuum.EdgeJs
         public static ITextReader _txtReader = Dependencies.CheckoutTextReader(_platform);
         public static ITextToSpeech _tts = Dependencies.CheckoutTts(_platform);
 
-        public static async Task<object> Invoke(dynamic input)
+        public async Task<object> Invoke()
         {
-            return _txtReader.GetLines()[0];
+            return "HELLO!";
+            //return _txtReader.GetLines()[0];
         }
 
         // public async Task<object> Invoke(dynamic input)

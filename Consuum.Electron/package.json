@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "edge-js": "^10.3.0",
-    "electron-edge-js": "^8.3.5",
     "moonjs": "^0.11.0"
   }
 }
