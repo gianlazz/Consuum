@@ -260,6 +260,3 @@ paket-files/
 __pycache__/
 *.pyc
 Consuum.ElectronNET/wwwroot/dist/
-Consuum.ElectronNET/wwwroot/dist/main.js
-wwwroot/dist/*
-Consuum.ElectronNET/wwwroot/dist/main.js
