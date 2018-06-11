@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
+using ElectronNET.API.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -46,8 +47,17 @@ namespace Consuum.ElectronNET
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            // Open the Electron-Window here
-            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
+            ElectronWindow();
+        }
+
+        private void ElectronWindow()
+        {
+            var options = new BrowserWindowOptions()
+            {
+                //TitleBarStyle = TitleBarStyle.hiddenInset,
+            };
+                        // Open the Electron-Window here
+            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync(options));
         }
     }
 }
