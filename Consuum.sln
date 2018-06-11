@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consuum.Clipboard", "Consuu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consuum.DiLibrary", "Consuum.DiLibrary\Consuum.DiLibrary.csproj", "{56CF63D9-8947-4178-A625-A177091ECB0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consuum.ElectronNET", "Consuum.ElectronNET\Consuum.ElectronNET.csproj", "{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,18 +95,6 @@ Global
 		{56CF63D9-8947-4178-A625-A177091ECB0F}.Release|x64.Build.0 = Release|x64
 		{56CF63D9-8947-4178-A625-A177091ECB0F}.Release|x86.ActiveCfg = Release|x86
 		{56CF63D9-8947-4178-A625-A177091ECB0F}.Release|x86.Build.0 = Release|x86
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Debug|x64.ActiveCfg = Debug|x64
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Debug|x64.Build.0 = Debug|x64
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Debug|x86.ActiveCfg = Debug|x86
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Debug|x86.Build.0 = Debug|x86
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Release|x64.ActiveCfg = Release|x64
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Release|x64.Build.0 = Release|x64
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Release|x86.ActiveCfg = Release|x86
-		{E97B4F75-6E1D-4D27-A6EE-C9E844E6AD7F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
