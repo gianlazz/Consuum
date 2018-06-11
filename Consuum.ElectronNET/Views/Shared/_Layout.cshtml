@@ -66,6 +66,14 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
+    <environment names="Development">
+        <script src="~/dist/main.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/dist/main.js" asp-append-version="true"></script>
+    </environment>
+
     @RenderSection("Scripts", required: false)
+
 </body>
 </html>
