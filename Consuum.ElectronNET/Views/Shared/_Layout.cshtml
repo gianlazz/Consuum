@@ -4,6 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
+        <environment names="Development">
+        <script src="~/dist/main.js"></script>
+          <script src="https://unpkg.com/moonjs"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/dist/main.js" asp-append-version="true"></script>
+          <script src="https://unpkg.com/moonjs"></script>
+    </environment>
 </head>
 <body>
     <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -26,16 +34,14 @@
     </nav> -->
     <div class="container body-content">
         @RenderBody()
-          <div id="app1">
-  <p>{{msg}}</p>
-</div>
-    </div>
 
     <environment names="Development">
         <script src="~/dist/main.js"></script>
+          <script src="https://unpkg.com/moonjs"></script>
     </environment>
     <environment names="Staging,Production">
         <script src="~/dist/main.js" asp-append-version="true"></script>
+          <script src="https://unpkg.com/moonjs"></script>
     </environment>
 
     @RenderSection("scripts", required: false)

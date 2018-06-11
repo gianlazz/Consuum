@@ -31,15 +31,15 @@ module.exports = function (env) {
     }
   }
 
-  // Alter config for prod environment
-  if (isProd) {
-    config.devtool = 'source-map';
-    config.plugins = config.plugins.concat([
-      new webpack.optimize.UglifyJsPlugin({
-        sourceMap: true
-      })
-    ]);
-  }
+  // // Alter config for prod environment
+  // if (isProd) {
+  //   config.devtool = 'source-map';
+  //   config.plugins = config.plugins.concat([
+  //     new webpack.optimize.UglifyJsPlugin({
+  //       sourceMap: true
+  //     })
+  //   ]);
+  // }
 
   return config;
 };
