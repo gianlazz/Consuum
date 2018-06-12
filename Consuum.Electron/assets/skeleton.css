@@ -18,6 +18,7 @@
 html {
   font-size: 1em;
   box-sizing: border-box;
+  text-align: center;
 }
 
 *,
@@ -1201,4 +1202,14 @@ hr {
 
 @media (min-width: 1200px) {
   /* Larger than Desktop HD */
+  
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
 }

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+  </style>
     <title>Consuum</title>
     <br/>
     <!-- <link rel="stylesheet" href="assets/milligram.css"> -->
@@ -10,22 +11,34 @@
     <!-- <link rel="stylesheet" href="assets/dark.css"> -->
   </head>
   <body>
-  <h1>Consuum</h1>
-
-    <div id="app">
-        <h1>{{msg}}</h1>
-        <input type="text" m-model="msg"/>
+      <div class="container u-full-width">
+          <div class="row">
+            <div class="four column"></div>
+            <div class="four columns"><h1>Consuum</h1></div>
+            <div class="four columns"></div>
+          </div>  
       </div>
 
-      <div id="app3">
-        <p>{{msg}}</p>
+      <div class="container u-full-width">
+          <div class="row">
+            <div class="four column">
+                <div id="app">
+                    <h1>{{msg}}</h1>
+                    <input type="text" m-model="msg"/>
+                  </div>
+            </div>
+            <div class="four columns">
+                <div id="button">
+                    <button>Speak From Clipboard</button>
+                </div>
+            </div>
+            <div class="four columns">
+                <div id="app3">
+                    <p>{{msg}}</p>
+                  </div>
+            </div>
+          </div>  
       </div>
-
-      <div id="button">
-          <button>Speak From Clipboard</button>
-      </div>
-      
-
 
     <script>
       // You can also require other files to run in this process
