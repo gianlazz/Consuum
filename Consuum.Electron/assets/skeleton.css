@@ -18,7 +18,7 @@
 html {
   font-size: 1em;
   box-sizing: border-box;
-  text-align: center;
+  vertical-align: middle;
 }
 
 *,
@@ -34,6 +34,10 @@ body {
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
+
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .container {
