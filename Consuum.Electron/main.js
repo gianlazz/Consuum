@@ -7,10 +7,15 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600, titleBarStyle: "hiddenInset"})
+  mainWindow = new BrowserWindow({width: 800, height: 600, titleBarStyle: "hiddenInset", show: false})
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
+
+  // tells electron to wait until it's done loading to show
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+})
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
