@@ -1,5 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
+using Consuum.DiLibrary;
 
 namespace api.Controllers
 {
@@ -10,9 +11,14 @@ namespace api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            // var result = new [] {
+            //     new { FirstName = "John", LastName = "Doe" },
+            //     new { FirstName = "Mike", LastName = "Smith" }
+            // };
+            var clipboard = Dependencies.CheckoutTextReader(PlatformEnum.MacOS);
+            var lines = clipboard.GetLines();
             var result = new [] {
-                new { FirstName = "John", LastName = "Doe" },
-                new { FirstName = "Mike", LastName = "Smith" }
+                new { Clipboard = lines[0] }
             };
 
             return Ok(result);
