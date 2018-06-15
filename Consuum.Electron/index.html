@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/macelectron.css">
-    <title>Contacts App</title>
+    <title>Consuum</title>
 </head>
 <body>
     <div class="container" ng-controller="ContactsCtrl as ctrl">
+        <br>
         <h1>{{ctrl.Title}}</h1>
         <p style="color: red" ng-show="ctrl.ErrorMessage">{{ctrl.ErrorMessage}}</p>
         <table >
             <thead>
                 <tr>
-                    <th style="min-width: 80px;">First name</th>
-                    <th style="min-width: 80px;">Last name</th>
+                    <!-- <th style="min-width: 80px;">First name</th>
+                    <th style="min-width: 80px;">Last name</th> -->
                 </tr>
             </thead>
             <tbody>

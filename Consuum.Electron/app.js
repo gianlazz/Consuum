@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 app.controller('ContactsCtrl', function (ContactsService) {
     var ctrl = this;
-    ctrl.Title = 'Contacts List';
+    ctrl.Title = 'Consuum';
 
     LoadContacts();
 
