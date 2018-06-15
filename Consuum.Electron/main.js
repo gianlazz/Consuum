@@ -75,11 +75,13 @@ function startApi() {
   var apipath = path.join(__dirname, '..\\Consuum.WebApi\\bin\\dist\\win\\Consuum.WebApi.exe')
   if (os.platform() === 'darwin') {
     //Release
-    //apipath = path.join(__dirname, '..//Consuum.WebApi//bin//dist//osx//Consuum.WebApi')
+    apipath = path.join(__dirname, '..//Consuum.WebApi//bin//dist//osx//Consuum.WebApi')
     //Debug
-    apipath = path.join(__dirname, '..//Consuum.WebApi//bin//Debug//netcoreapp2.0//Consuum.WebApi')
+    //apipath = path.join(__dirname, '..//Consuum.WebApi//Consuum.WebApi.csproj')
   }
   apiProcess = proc(apipath)
+    //Debug
+  //apiProcess = proc('dotnet run --project ' + apipath)
 
   apiProcess.stdout.on('data', (data) => {
     writeLog(`stdout: ${data}`);
