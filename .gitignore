@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 Consuum.ElectronNET/wwwroot/dist/
+Consuum-Electron/consuum-electron-darwin-x64
