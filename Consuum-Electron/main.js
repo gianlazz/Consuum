@@ -8,8 +8,8 @@ app.on('ready', function () {
   // Initialize the window to our specified dimensions
   win = new BrowserWindow({width: 1000, height: 600, titleBarStyle: "hiddenInset"});
 
-  // Specify entry point
-  win.loadURL('http://localhost:4200');
+  // // Specify entry point
+  win.loadURL(`file://${__dirname}/dist/Consuum-Electron/index.html`)
 
   // Show dev tools
   // Remove this line before distributing
